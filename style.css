@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Heebo', sans-serif;
+    color: #ac4af8;
+}
+
+section{
+    background: linear-gradient(to left, #000000f1, rgba(0, 0, 0, 0.829), #000000d2, #000000ac, #00000052, #00000052, #00000052), url(./images/the-cyber-city-guys-ew.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.c1{
+    height: 100%;
+    position: relative;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    position: absolute;
+    left: -3%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+}
+
+.socials i{
+    font-size: 2.7rem;
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2em;
+    position: relative;
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    border-radius: .6rem;
+    background: linear-gradient(to left, #8a00b0, #0055ff, cyan, #00d800, yellow, red, #ff00ee, #8a00b0);
+    background-size: 400%;
+    animation: neon 25s linear infinite;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    background: linear-gradient(to left, #8a00b0, #0055ff, cyan, #00d800, yellow, red, #ff00ee, #8a00b0);
+    background-size: 400%;
+    filter: blur(7px);
+    animation: neon 25s linear infinite;
+}
+
+@keyframes neon {
+    from{
+        background-position: 0%;
+    }
+
+    to{
+        background-position: 400%;
+    }
+}
+
+header h1{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+header nav ul{
+    display: flex;
+    gap: 6em;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.hero-sec{
+    display: flex;
+    justify-content: end;
+    height: 80%;
+    align-items: center;
+}
+
+.hero-sec-content{
+    width: 40rem;
+}
+
+.hero-sec-content h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.hero-sec-content p{
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: rgb(191, 191, 191);
+    font-weight: 300;
+}
+
+button{
+    border: none;
+    position: relative;
+    background: linear-gradient(to left, #8a00b0, #0055ff, cyan, #00d800, yellow, red, #ff00ee, #8a00b0);
+    width: 13rem;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: 400%;
+    animation: neon 25s linear infinite;
+    margin-top: .5rem;
+}
+
+button::after{
+    content: '';
+    background: linear-gradient(to left, #8a00b0, #0055ff, cyan, #00d800, yellow, red, #ff00ee, #8a00b0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 400%;
+    animation: neon 25s linear infinite;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    transition: .5s;
+}
+
+button:hover::after{
+    filter: blur(1.5em);
+}
+
+button span{
+    position: absolute;
+    background: rgb(26, 26, 26);
+    inset: 1.5px;
+    border-radius: inherit;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: black;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.gradient{
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #8a00b0, #0055ff, cyan, #00d800, yellow, red, #ff00ee, #8a00b0);
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-100%);
+}
+
+.content h1{
+    background: black;
+    overflow: hidden;
+}
+
+.content h1 span{
+    font-size: 5rem;
+    font-weight: 400;
+    transform: translateY(100%);
+    display: inline-block;
+}
